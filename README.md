@@ -105,6 +105,8 @@ una vez que se revisó la imagen se hace el suavizado espacial de la en con los 
 
    Hacer suavizado sobre la máscara con AFNI: 
 
-   `dBlurInMask -input bandpassed_demeaned_filtered_warp.nii.gz -prefix bandpassed_demeaned_filtered_warp_FWHM6.nii.gz -mask afni_mask.nii.gz -FWHM 6`
+   ```
+   dBlurInMask -input bandpassed_demeaned_filtered_warp.nii.gz -prefix bandpassed_demeaned_filtered_warp_FWHM6.nii.gz -mask afni_mask.nii.gz -FWHM 6
+   ```
 
    
