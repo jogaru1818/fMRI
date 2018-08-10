@@ -16,7 +16,7 @@
 - Compcor(primeros 6 componentes) [Behzadi et al., 2007](https://www.sciencedirect.com/science/article/pii/S1053811907003837?via%3Dihub)
 - linear & cuadratic detrending (controlar efecto de algunos artefactos inducidos por el funcionameinto del resonador y el movimiento del sujeto)
 - parámetros de movimiento (Friston 24)
-- Despiking: Si un volumen tiene un valor de framewise displacement mayor a **0.25**  es incluído dentro del modelo de regresión. E Los sujetos incluídos en el analísis deben contar con al menos `n` volúmenes para hacer el análsis.
+- Despiking: Si un volumen tiene un valor de framewise displacement mayor a **0.25**  es incluído dentro del modelo de regresión. E Los sujetos incluídos en el analísis deben contar con al menos n volúmenes para hacer el análsis.
 6. Filtrado temporal: Filtro pasabandas para las frecuencias de 0.01 - 0.08 Hz [Satherthwaite et al., 2013](https://www.sciencedirect.com/science/article/pii/S1053811912008609?via%3Dihub)
 7. Registro linear con imagén estructural (T1w) y transformación no lineal a espacion MMNI.
 8. Suavizado espacial: FWHM de 6mm
