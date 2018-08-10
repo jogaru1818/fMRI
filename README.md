@@ -84,7 +84,27 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state:/mnt -B 
 
 
 9. mandar job a ADA con el comando `qsub cpac_job.sge`
+
 10. para revisar el estado del trabajo se puede con el comando `qstat`
 
+11. una vez se hayan procesados las imagenes copiar la carpeta a tu computadora con el siguiente comando:
 
+    `scp -rv   afajardo@ada.lavis.unam.mx:/mnt/MD1200A/lconcha/afajardo/jonathan/resting_state/run_cpac/output .`
 
+una vez que se revisó la imagen se hace el suavizado espacial de la en con los siguientes pasos: 
+
+1. Crear una máscara del cerebro
+
+   puedes hacerlo de estas dos formas. con fsl:
+
+   `fslmaths bandpassed_demeaned_filtered_warp.nii.gz  -Tmean -abs  -bin mask.nii.gz`
+
+   con afni: 
+
+   `3dAutomask -prefix afni_mask.nii.gz bandpassed_demeaned_filtered_warp.nii.gz`
+
+   Hacer suavizado sobre la máscara con AFNI: 
+
+   `dBlurInMask -input bandpassed_demeaned_filtered_warp.nii.gz -prefix bandpassed_demeaned_filtered_warp_FWHM6.nii.gz -mask afni_mask.nii.gz -FWHM 6`
+
+   
