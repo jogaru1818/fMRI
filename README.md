@@ -77,8 +77,6 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state:/mnt -B 
   /mnt/data_BIDS \
   /mnt/run_cpac  \
   participant --participant_ndx ${sge_ndx}
-[afajardo@naica1 resting_state]$ 
-
 ```
 
 
