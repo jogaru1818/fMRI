@@ -28,20 +28,20 @@
 
 1.  Generar una carpeta de trabajo (de preferencia con las imágenes en formato BIDS) con la siguiente estructura:
 ```
-   **resting_state/**
+   resting_state/
 
-   **├── data_BIDS**
-   **│   └── sub-001**  <----- *(Una carpeta para cada sujeto)*
-   **│       ├── anat**
-   **│       │   └── sub-001_T1.nii.gz**
-   **│       └── func**
-   **│           └── sub-001_task-rest_bold.nii.gz**
-   **├── run_cpac**
-   **│   ├── crash**
-   **│   ├── log**
-   **│   ├── output**
-   **│   └── working**
-   **└── tmp**
+   ├── data_BIDS**
+   │   └── sub-001  <----- (Una carpeta para cada sujeto)
+   │       ├── anat
+   │       │   └── sub-001_T1.nii.gz
+   │       └── func
+   │           └── sub-001_task-rest_bold.nii.gz
+   ── run_cpac
+   │   ├── crash
+   │   ├── log
+   │   ├── output
+   │   └── working
+   └── tmp
    ```
 2. Hacer la corrección de *Slice Timming*  de la imagen funcional con fsl 5.0.11
 
@@ -94,7 +94,7 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state/:/mnt -B
 
 ```
 
-- para crear lista de sujetos se da click en `New` y se  especifican los directorios en donde se encuentran las imagenes. En este caso como no estamos usando el formato BIDS la pantalla debe verse como en la imagen. Si se introdujeron los argumentos sin errores al hacer click en el boton  `Generate Data Config` la ventana debe cerrarse automaticamente y visualizaremos una pestaña la tista de sujetos (hacer click en `View`para inspeccionarla)
+- Para crear lista de sujetos se da click en `New` y se  especifican los directorios en donde se encuentran las imagenes. En este caso como no estamos usando el formato BIDS la pantalla debe verse como en la imagen. Si se introdujeron los argumentos sin errores al hacer click en el boton  `Generate Data Config` la ventana debe cerrarse automaticamente y visualizaremos una pestaña la tista de sujetos (hacer click en `View`para inspeccionarla)
 
   ![](/home/alfonso/Documentos/github/fMRI/GUI.png)
 
