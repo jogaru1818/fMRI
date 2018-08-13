@@ -112,7 +112,7 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state/:/mnt -B
   
   ```
 
-7. Editar archivo cpac_jog .sge el cual debe verse algo así (*verificar que los nombres de la lista de sujetos y del pipeline sean los correctos* ): 
+7. Editar archivo cpac_job.sge el cual debe verse algo similar a esto (*verificar que los nombres de la lista de sujetos y del pipeline sean los correctos* ): 
 
 ```bash
 #! /bin/bash
@@ -172,7 +172,7 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state:/mnt -B 
 
     
 
-    11. Realizar el suavizado espacial  de cada imagen a través de los siguientes pasos:
+    11.Realizar el suavizado espacial  de cada imagen a través de los siguientes pasos:
 
     - Crear una máscara del cerebro
 
