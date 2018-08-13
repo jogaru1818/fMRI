@@ -190,7 +190,7 @@ bet bandpassed_demeaned_filtered_warp.nii.gz   sub-001  -m
 
 
 
-Suavizar sobre la máscara. Con **FSL** se usa `fslmaths`con la opcion `-s` 
+- Suavizar sobre la máscara. Con **FSL** se usa `fslmaths`con la opcion `-s` 
 
 **Con AFNI:** 
 
