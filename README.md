@@ -4,13 +4,13 @@
 
 # Resting State
 
-### **preprocesamiento de las imágenes funcionales**:
+### **Preprocesamiento de las imágenes funcionales**:
 
 1. Corrección de *Slice Timming*
 2. Corrección de movimiento
 3. *skull strip*
 4. Cálculo de Framewise displacement (método de Power)
-5. **regresión del ruido:**
+5. **Regresión del ruido:**
 - regresión de la señal sustancia blanca (valor promedio por volumen)
 - regresión de la señal del líquido cerebroespinal ( valor promedio por volumen)
 - Compcor(primeros 6 componentes) [Behzadi et al., 2007](https://www.sciencedirect.com/science/article/pii/S1053811907003837?via%3Dihub)
