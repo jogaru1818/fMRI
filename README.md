@@ -27,7 +27,7 @@
 
 
 1.  Generar una carpeta de trabajo (de preferencia con las imágenes en formato BIDS) con la siguiente estructura:
-
+```
    **resting_state/**
 
    **├── data_BIDS**
@@ -42,7 +42,7 @@
    **│   ├── output**
    **│   └── working**
    **└── tmp**
-
+   ```
 2. Hacer la corrección de *Slice Timming*  de la imagen funcional con fsl 5.0.11
 
    ```bash
