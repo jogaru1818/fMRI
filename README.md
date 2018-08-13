@@ -96,7 +96,7 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state/:/mnt -B
 
 - Para crear lista de sujetos se da click en `New` y se  especifican los directorios en donde se encuentran las imagenes. En este caso como no estamos usando el formato BIDS la pantalla debe verse como en la imagen. Si se introdujeron los argumentos sin errores al hacer click en el boton  `Generate Data Config` la ventana debe cerrarse automaticamente y visualizaremos una pestaña la tista de sujetos (hacer click en `View`para inspeccionarla)
 
-  ![](/home/alfonso/Documentos/github/fMRI/GUI.png)
+![alt text](https://github.com/jogaru1818/fMRI/blob/master/GUI.png)
 
 - Generar un nuevo pipeline dando click en `New`. Revisar la documentación de CPAC para modificar los parametros deseados. guardarlo en /mnt/run_cpac.
 
