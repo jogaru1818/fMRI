@@ -30,7 +30,7 @@
 ```
    resting_state/
 
-   ├── data_BIDS**
+   ├── data_BIDS
    │   └── sub-001  <----- (Una carpeta para cada sujeto)
    │       ├── anat
    │       │   └── sub-001_T1.nii.gz
