@@ -168,11 +168,11 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state:/mnt -B 
     scp -rv afajardo@ada.lavis.unam.mx:/mnt/MD1200A/lconcha/afajardo/jonathan/resting_state/run_cpac/output .
     ```
 
-    *Las imagnes ya preprocesadas pueden encontrarse en las subcarpetas functional_to_standard y/o functional_freq_filtered. Tambien pueden revisarse las carpetas Despiking_frames_ los volúmenes que se excluyeron.*
+    *Las imagnes ya preprocesadas pueden encontrarse en las subcarpetas functional_to_standard y/o functional_freq_filtered. Tambien pueden revisarse las carpetas Despiking_frames_ para ver  los volúmenes que se excluyeron.*
 
     
 
-    11. Realizar de cada imagen a través de los siguientes pasos:
+    11. Realizar el suavizado espacial  de cada imagen a través de los siguientes pasos:
 
     - Crear una máscara del cerebro
 
@@ -190,7 +190,7 @@ bet bandpassed_demeaned_filtered_warp.nii.gz   sub-001  -m
 
 
 
-Hacer suavizado sobre la máscara. Con **FSL** se usa `fslmaths`con la opcion `-s` 
+Suavizar sobre la máscara. Con **FSL** se usa `fslmaths`con la opcion `-s` 
 
 **Con AFNI:** 
 
@@ -198,4 +198,4 @@ Hacer suavizado sobre la máscara. Con **FSL** se usa `fslmaths`con la opcion `-
 3dBlurInMask -input bandpassed_demeaned_filtered_warp.nii.gz -prefix bandpassed_demeaned_filtered_warp_FWHM6.nii.gz -mask sub-001_mask.nii.gz -FWHM 6
 ```
 
-12: Hacer control de calidad de las imagenes y revisar si  se cumple con los criterios de inclusion.
+12: Hacer control de calidad de las imagenes y revisar si se cumple con los criterios de inclusion.
