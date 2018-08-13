@@ -62,7 +62,7 @@
    - Dividir la imagen estructural entre la imagen de bias_field:
 
      ```bash
-     fslmaths ub-001_T1w.nii.gz -div sub-001_T1w_bias.nii.gz sub-001_T1w_bcorr.nii.gz
+     fslmaths sub-001_T1w.nii.gz -div sub-001_T1w_bias.nii.gz sub-001_T1w_bcorr.nii.gz
      ```
 
 4.  Copiar la carpeta de trabajo al directorio de trabajo en lavis:
