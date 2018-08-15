@@ -22,7 +22,7 @@
 8. Suavizado espacial: FWHM de 6mm
 
 
-# <u>Pasos para correr [CPAC](http://fcp-indi.github.io/docs/user/index.html)</u>
+# <u> Once sencillos pasos para correr [CPAC](http://fcp-indi.github.io/docs/user/index.html)</u> 
 
 
 
@@ -33,7 +33,7 @@
    ├── data_BIDS
    │   └── sub-001  <----- (Una carpeta para cada sujeto)
    │       ├── anat
-   │       │   └── sub-001_T1.nii.gz
+   │       │   └── sub-001_T1w.nii.gz
    │       └── func
    │           └── sub-001_task-rest_bold.nii.gz
    ── run_cpac
@@ -51,21 +51,14 @@
 
    **NOTA: la opción** `--odd`  s**e emplea en imagenes con adquisición Interleaved.**     
 
-   3.  Si es necesario, hacer *bias field correcction* de la T1 de la siguente manera con FSL:
+   3. Si es necesario, hacer *bias field correcction* de la T1 de la siguente manera con FSL:
 
-      - Estimar el bias field:
+      
 
       ```bash
-      fast -b -o sub-001_T1w_bias.nii.gz sub-001_T1w.nii.gz
+      fast -B sub-001_T1w_bias.nii.gz sub-001_T1w.nii.gz
       ```
-
-   - Dividir la imagen estructural entre la imagen de bias_field:
-
-     ```bash
-     fslmaths sub-001_T1w.nii.gz -div sub-001_T1w_bias.nii.gz sub-001_T1w_bcorr.nii.gz
-     ```
-
-4.  Copiar la carpeta de trabajo al directorio de trabajo en lavis:
+4. Copiar la carpeta de trabajo al directorio de trabajo en lavis:
 
    ```bash
    scp -rv resting_state afajardo@ada.lavis.unam.mx:/mnt/MD1200A/lconcha/afajardo/jonathan
@@ -156,13 +149,13 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state:/mnt -B 
 
 
 
-9. Mandar job a ADA con el comando: 
+8 Mandar job a ADA con el comando: 
 
    - `qsub cpac_job.sge`
 
    - para revisar el estado del trabajo se puede con el comando `qstat`. Debe verse en el estado del trabajo `r`
 
-10. Una vez se hayan procesados las imagenes copiar la carpeta a tu computadora con el siguiente comando
+9. Una vez se hayan procesados las imagenes copiar la carpeta a tu computadora con el siguiente comando
 
     ```bash
     scp -rv afajardo@ada.lavis.unam.mx:/mnt/MD1200A/lconcha/afajardo/jonathan/resting_state/run_cpac/output .
@@ -172,7 +165,7 @@ singularity run -B /mnt/MD1200A/lconcha/afajardo/jonathan/resting_state:/mnt -B 
 
     
 
-    11.Realizar el suavizado espacial  de cada imagen a través de los siguientes pasos:
+    10. Realizar el suavizado espacial  de cada imagen a través de los siguientes pasos:
 
     - Crear una máscara del cerebro
 
@@ -198,4 +191,4 @@ bet bandpassed_demeaned_filtered_warp.nii.gz   sub-001  -m
 3dBlurInMask -input bandpassed_demeaned_filtered_warp.nii.gz -prefix bandpassed_demeaned_filtered_warp_FWHM6.nii.gz -mask sub-001_mask.nii.gz -FWHM 6
 ```
 
-12: Hacer control de calidad de las imagenes y revisar si se cumple con los criterios de inclusion.
+11: Hacer control de calidad de las imagenes y revisar si se cumple con los criterios de inclusion.
